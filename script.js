@@ -85,3 +85,51 @@ mainContainer.addEventListener('click', function(e) {
         }
     }
 });
+
+//Tab filtering function
+function filterTab(name) {
+    const list = mainContainer.getElementsByClassName('job-card');
+    let showCount = 0;
+
+    //Set button color
+    const btnIds = ['tab-all', 'tab-interview', 'tab-rejected'];
+    for (let x = 0; x < btnIds.length; x++) {
+        let b = document.getElementById(btnIds[x]);
+        b.classList.remove('bg-blue-600', 'text-white');
+        b.classList.add('bg-gray-200', 'text-gray-700');
+    }
+
+    //Turn the selected button blue
+    const active = document.getElementById('tab-' + name);
+    active.classList.remove('bg-gray-200', 'text-gray-700');
+    active.classList.add('bg-blue-600', 'text-white');
+
+    //Show or hide cards
+    for (let y = 0; y < list.length; y++) {
+        let item = list[y];
+        let currentStatus = item.querySelector('.status-badge').innerText.toLowerCase();
+
+        if (name === 'all') {
+            item.style.display = "block";
+            showCount++;
+        } 
+        else if (currentStatus === name) {
+            item.style.display = "block";
+            showCount++;
+        } 
+        else {
+            item.style.display = "none";
+        }
+    }
+
+    tabText.innerText = showCount + " jobs";
+    
+    //If there is no data
+    if (showCount === 0) {
+        noData.classList.remove('hidden');
+    } 
+    else {
+        noData.classList.add('hidden');
+    }
+
+}
