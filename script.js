@@ -37,3 +37,51 @@ function updateAllNumbers() {
     //Showing how many are next to the tab
     tabText.innerText = total + " jobs";
 }
+
+//Handling button click actions
+mainContainer.addEventListener('click', function(e) {
+    const clickedElement = e.target;
+    const singleCard = clickedElement.closest('.job-card');
+
+    if (!singleCard) {
+        return;
+    }
+
+    const badgeArea = singleCard.querySelector('.status-badge');
+
+    //Pressing the interview button
+    if (clickedElement.classList.contains('interview-btn')) {
+        badgeArea.innerText = "Interview";
+        
+        badgeArea.classList.remove('bg-blue-50', 'text-blue-600', 'bg-red-50', 'text-red-600');
+        badgeArea.classList.add('bg-green-50', 'text-green-600');
+        
+        updateAllNumbers();
+    }
+
+    //If you press the rejected button
+    if (clickedElement.classList.contains('rejected-btn')) {
+        badgeArea.innerText = "Rejected";
+        
+        badgeArea.classList.remove('bg-blue-50', 'text-blue-600', 'bg-green-50', 'text-green-600');
+        badgeArea.classList.add('bg-red-50', 'text-red-600');
+        
+        updateAllNumbers();
+    }
+
+    //If you press the delete icon
+    if (clickedElement.closest('.delete-btn')) {
+        let check = confirm("Do you want to delete it?");
+        
+        if (check === true) {
+            singleCard.remove();
+            updateAllNumbers();
+            
+            //If everything becomes empty
+            let listLeft = mainContainer.getElementsByClassName('job-card').length;
+            if (listLeft === 0) {
+                noData.classList.remove('hidden');
+            }
+        }
+    }
+});
