@@ -28,7 +28,8 @@
   </style>
 </head>
 <body class="geist-fonts">
-    <div class="container mx-auto px-4 py-8 lg:w-[80%]">
+    <!-- main section -->
+    <main class="container mx-auto px-4 py-8 lg:w-[80%]">
     <!-- header section -->
         <header class="mb-10">
             <h1 class="text-3xl font-bold text-[#002D5B] mb-8">Job Application Tracker</h1>
@@ -50,8 +51,8 @@
         </header>
 
         <hr class="border-gray-200 mb-10">
-        <!-- main section -->
-        <main>
+        <!--  available job, btns & job container section -->
+        <section>
           <!-- available jobs -->
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-[#002D5B]">Available Jobs</h2>
@@ -65,8 +66,9 @@
                 <button id="tab-rejected" class="btn btn-sm bg-gray-200 text-gray-700">Rejected</button>
             </div>
 
+            <!-- job-container-section -->
             <section id="job-container" class="space-y-6">
-                
+
                 <div class="job-card bg-white p-8 rounded-xl border border-gray-100 relative shadow-sm">
                     <button class="delete-btn absolute top-4 right-4 text-gray-400 hover:text-red-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -78,11 +80,11 @@
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
                         <span>Remote</span> <span>• Full-time</span> <span>• $130.000-$175.000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Build cross-platform mobile applications using React Native.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -95,13 +97,13 @@
                     <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
                     <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>Los Angeles, CA</span> <span>• Part-time</span> <span>• $80,000-$120,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -111,16 +113,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">DataViz Solutions</h3>
+                    <p class="job-title text-gray-600 font-medium">Data Visualization Specialist</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>Boston, MA</span> <span>• Full-time</span> <span>• $125,000-$165,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -130,16 +133,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">CloudFirst Inc</h3>
+                    <p class="job-title text-gray-600 font-medium">Backend Developer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>Seattle, WA</span> <span>• Full-time</span> <span>•$140,000 - $190,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -149,16 +153,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">Innovation Labs</h3>
+                    <p class="job-title text-gray-600 font-medium">UI/UX Engineer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>Austin, TX</span> <span>• Full-time</span> <span>• $110,000 - $150,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -168,16 +173,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">MegaCorp Solutions</h3>
+                    <p class="job-title text-gray-600 font-medium">JavaScript Developer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>New York, NY</span> <span>• Full-time</span> <span>• $130,000 - $170,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -187,16 +193,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">StartupXYZ</h3>
+                    <p class="job-title text-gray-600 font-medium">Full Stack Engineer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>Remote</span> <span>• Full-time</span> <span>• $120,000 - $160,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -206,16 +213,17 @@
                         <path d="M3 6h18m-2 0v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6m3 0V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2m-6 5v6m4-6v6"/>
                         </svg>
                     </button>
-                    <h3 class="company-name text-xl font-bold text-gray-800">WebFlow Agency</h3>
-                    <p class="job-title text-gray-600 font-medium">Web Designer & Developer</p>
+                    <h3 class="company-name text-xl font-bold text-gray-800">TechCorp Industries</h3>
+                    <p class="job-title text-gray-600 font-medium">Senior Frontend Developer</p>
                     <div class="flex gap-4 text-sm text-gray-500 my-2">
-                        <span>📍 Los Angeles, CA</span> <span>• Part-time</span> <span>• $80k-$120k</span>
+                        <span>San Francisco, CA</span> <span>• Full-time</span> <span>• $130,000 - $175,000</span>
                     </div>
-                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">Not Applied</div>
-                    <p class="text-gray-500 text-sm mb-6">Create stunning web experiences for high-profile clients.</p>
+                    <div class="status-badge inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded text-xs font-bold mb-4 uppercase">NOT APPLIED</div>
+                    <p class="text-gray-500 text-sm mb-6">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+                    </p>
                     <div class="flex gap-3">
-                        <button class="interview-btn btn btn-sm btn-outline btn-success">Interview</button>
-                        <button class="rejected-btn btn btn-sm btn-outline btn-error">Rejected</button>
+                        <button class="interview-btn btn btn-sm btn-outline btn-success">INTERVIEW</button>
+                        <button class="rejected-btn btn btn-sm btn-outline btn-error">REJECTED</button>
                     </div>
                 </div>
 
@@ -224,11 +232,11 @@
             <!-- no job available div -->
             <div id="empty-state" class="hidden flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-gray-100 shadow-sm">
                 <img src="./asset/jobs.png" alt="No jobs" class="w-24 mb-4 opacity-50">
-                <h3 class="text-xl font-bold text-gray-800">No jobs available</h3>
+                <h3 class="text-xl font-bold text-gray-800">No jobs Available</h3>
                 <p class="text-gray-500">Check back soon for new job opportunities</p>
             </div>
-        </main>
-    </div>
+        </section>
+    </main>
 
   <!-- external JS -->
   <script src="./script.js"></script>
