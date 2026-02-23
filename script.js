@@ -15,17 +15,16 @@ function updateAllNumbers() {
     let rejectedNum = 0;
 
     //Checking with a loop
-    for (let i = 0; i < totalCards.length; i++) {
-        let card = totalCards[i];
+    for (let card of totalCards){
         let badge = card.querySelector('.status-badge');
         let status = badge.innerText.toLowerCase();
 
         if (status === 'interview') {
-            interviewNum = interviewNum + 1;
+            interviewNum++;
         } 
         
         if (status === 'rejected') {
-            rejectedNum = rejectedNum + 1;
+            rejectedNum++;
         }
     }
 
@@ -93,8 +92,8 @@ function filterTab(name) {
 
     //Set button color
     const btnIds = ['tab-all', 'tab-interview', 'tab-rejected'];
-    for (let x = 0; x < btnIds.length; x++) {
-        let b = document.getElementById(btnIds[x]);
+    for (let id of btnIds) {
+        let b = document.getElementById(id)
         b.classList.remove('bg-blue-600', 'text-white');
         b.classList.add('bg-gray-200', 'text-gray-700');
     }
@@ -105,8 +104,7 @@ function filterTab(name) {
     active.classList.add('bg-blue-600', 'text-white');
 
     //Show or hide cards
-    for (let y = 0; y < list.length; y++) {
-        let item = list[y];
+    for (let item of list) {
         let currentStatus = item.querySelector('.status-badge').innerText.toLowerCase();
 
         if (name === 'all') {
