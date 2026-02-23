@@ -70,20 +70,32 @@ mainContainer.addEventListener('click', function(e) {
 
     //If you press the delete icon
     if (clickedElement.closest('.delete-btn')) {
-        let check = confirm("Do you want to delete it?");
-        
-        if (check === true) {
-            singleCard.remove();
-            updateAllNumbers();
-            
+      Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to delete it?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes",
+            cancelButtonText: "No"
+        })
+        .then((result) => {
+            if (result.isConfirmed) {
+                singleCard.remove();
+                updateAllNumbers();
+
             //If everything becomes empty
             let listLeft = mainContainer.getElementsByClassName('job-card').length;
             if (listLeft === 0) {
                 noData.classList.remove('hidden');
             }
+                
+                Swal.fire("Deleted!", "Job application has been removed.", "success");
+            }
+        });
         }
-    }
-});
+    });
 
 //Tab filtering function
 function filterTab(name) {
@@ -131,3 +143,5 @@ function filterTab(name) {
     }
 
 }
+// updateAllNumbers
+document.addEventListener('DOMContentLoaded', updateAllNumbers);
